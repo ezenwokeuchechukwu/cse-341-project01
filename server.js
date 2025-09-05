@@ -1,13 +1,16 @@
-const express = require('express'); // Corrected 'require'
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const { initializeDatabase } = require('./data/database'); // Adjusted path to match your setup
 
-const app = express(); // Corrected 'app express()'
+app.use(express.json()); // Optional: Useful for parsing JSON bodies
+app.use('/', require('./routes')); // Fixed path to routes folder
 
-const port = process.env.PORT || 3000; // Fixed assignment and spacing
-
-// Route middleware
-app.use('/', require('./routes')); // This assumes you have an index.js inside a 'routes' folder
-
-// Start server
-app.listen(port, () => {
-  console.log(`Running on port ${port}`); // Fixed template string and extra brace
-});
+initializeDatabase()
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`Database is listening and node running on port ${port}`);});
+  })
+  .catch((err) => {
+    console.error('Failed to connect to the database.', err);
+  });

@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/ezenwokeuchechukwu/cse-341-project01#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mogodb": "^0.0.1-security",
+    "mongodb": "^6.19.0"
   }
 }
