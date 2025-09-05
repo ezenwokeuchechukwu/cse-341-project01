@@ -1,20 +1,19 @@
-# =========================================
-# Localhost Endpoints
-# =========================================
+### Welcome Message (Local)
+GET http://localhost:3000/
 
-### Get all contacts (Localhost)
+### Get All Users (Local)
 GET http://localhost:3000/users
-Accept: application/json
 
+### Get User 1 by ID (Local)
+GET http://localhost:3000/users/68b9bd5633ab395eda5c2ef6
 
+### Get User 2 by ID (Local)
+GET http://localhost:3000/users/68b9bd7933ab395eda5c2ef8
 
-### Get a contact by ID (Localhost)
-GET http://localhost:3000/contacts/6742824d22c10d709ce17aa8
-Accept: application/json
+### Get User 3 by ID (Local)
+GET http://localhost:3000/users/68b9bdab33ab395eda5c2efa
 
-
-
-### Create a new contact (Localhost)
+### Create a New User (Local)
 POST http://localhost:3000/users
 Content-Type: application/json
 
@@ -26,72 +25,73 @@ Content-Type: application/json
   "birthday": "1988-03-12T00:00:00.000Z"
 }
 
-
-
-### Update a contact (Localhost)
-PUT http://localhost:3000/users/{users-id}
+### Create Another User (Local)
+POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "firstName": "Aisha",
-  "lastName": "Abubakar",
-  "email": "aisha.abubakar@example.com",
-  "favoriteColor": "Yellow",
+  "firstName": "Promise",
+  "lastName": "Ezenwoke",
+  "email": "ezenwokeuchechukwu@gmail.com",
+  "favoriteColor": "Blue",
+  "birthday": "1992-07-21T00:00:00.000Z"
+}
+
+### Update User 1 (Local)
+PUT http://localhost:3000/users/68b9bd5633ab395eda5c2ef6
+Content-Type: application/json
+
+{
+  "firstName": "Chinedu",
+  "lastName": "Okoro-Updated",
+  "email": "chinedu.updated@example.com",
+  "favoriteColor": "Gold",
   "birthday": "1988-03-12T00:00:00.000Z"
 }
 
-### Delete a contact (Localhost)
-DELETE http://localhost:3000/contacts/{users-id}
-Accept: application/json
+### Delete User 3 (Local)
+DELETE http://localhost:3000/users/68b9bdab33ab395eda5c2efa
 
+---
 
+### Welcome Message (Render)
+GET https://cse-341-project01-isr0.onrender.com/
 
+### Get All Users (Render)
+GET https://cse-341-project01-isr0.onrender.com/users
 
-# =========================================
-# Published API Endpoints
-# =========================================
+### Get User 1 by ID (Render)
+GET https://cse-341-project01-isr0.onrender.com/users/68b9bd5633ab395eda5c2ef6
 
-### Get all contacts (Published)
-GET https://cse-341-project1-ilkq.onrender.com/users
-Accept: application/json
+### Get User 2 by ID (Render)
+GET https://cse-341-project01-isr0.onrender.com/users/68b9bd7933ab395eda5c2ef8
 
+### Get User 3 by ID (Render)
+GET https://cse-341-project01-isr0.onrender.com/users/68b9bdab33ab395eda5c2efa
 
-
-### Get a contact by ID (Published)
-GET https://cse341-node-9dp6.onrender.com/contacts/68b9bd5633ab395eda5c2ef6
-Accept: application/json
-
-
-
-### Create a new contact (Published)
-POST https://cse-341-project1-ilkq.onrender.com/users
+### Create a New User (Render)
+POST https://cse-341-project01-isr0.onrender.com/users
 Content-Type: application/json
 
 {
-  "firstName": "Emeka",
-  "lastName": "Ibrahim",
-  "email": "emeka.ibrahim@example.com",
-  "favoriteColor": "Green",
-  "birthday": "1990-05-20T00:00:00.000Z"
+  "firstName": "Chinedu",
+  "lastName": "Okoro",
+  "email": "chinedu.okoro@example.com",
+  "favoriteColor": "Purple",
+  "birthday": "1988-03-12T00:00:00.000Z"
 }
 
-
-
-### Update a contact (Published)
-PUT https://cse-341-project1-ilkq.onrender.com/users/{users-id}
+### Update User 1 (Render)
+PUT https://cse-341-project01-isr0.onrender.com/users/68b9bd5633ab395eda5c2ef6
 Content-Type: application/json
 
 {
-  "firstName": "Amina",
-  "lastName": "Abdul",
-  "email": "amina.abdul@example.com",
-  "favoriteColor": "Blue",
-  "birthday": "1992-08-15T00:00:00.000Z"
+  "firstName": "Chinedu",
+  "lastName": "Okoro-Updated",
+  "email": "chinedu.updated@example.com",
+  "favoriteColor": "Gold",
+  "birthday": "1988-03-12T00:00:00.000Z"
 }
 
-
-
-### Delete a contact (Published)
-DELETE https://cse-341-project1-ilkq.onrender.com/users/{users-id}
-Accept: application/json
-
+### Delete User 3 (Render)
+DELETE https://cse-341-project01-isr0.onrender.com/users/68b9bdab33ab395eda5c2efa
