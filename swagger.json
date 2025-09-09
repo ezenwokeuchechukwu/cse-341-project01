@@ -6,18 +6,16 @@
     "description": "API for managing contacts"
   },
   "servers": [
-  {
-    "url": "https://cse-341-project01-isr0.onrender.com",
-    "description": "Production server on Render"
-}
-],
+    {
+      "url": "https://cse-341-project01-isr0.onrender.com",
+      "description": "Production server on Render"
+    }
+  ],
   "paths": {
     "/users": {
       "get": {
         "summary": "Returns the list of all users",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "The list of the users",
@@ -36,15 +34,13 @@
       },
       "post": {
         "summary": "Create a new user",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserInput"
               }
             }
           }
@@ -69,9 +65,7 @@
     "/users/{id}": {
       "get": {
         "summary": "Get the user by id",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -101,9 +95,7 @@
       },
       "put": {
         "summary": "Update the user by the id",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -120,7 +112,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserInput"
               }
             }
           }
@@ -139,9 +131,7 @@
       },
       "delete": {
         "summary": "Remove the user by id",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "in": "path",
@@ -168,13 +158,7 @@
     "schemas": {
       "User": {
         "type": "object",
-        "required": [
-          "firstName",
-          "lastName",
-          "email",
-          "favoriteColor",
-          "birthday"
-        ],
+        "required": ["firstName", "lastName", "email", "favoriteColor", "birthday"],
         "properties": {
           "_id": {
             "type": "string",
@@ -209,6 +193,40 @@
           "email": "chinedu.okoro@example.com",
           "favoriteColor": "Purple",
           "birthday": "1988-03-12"
+        }
+      },
+      "UserInput": {
+        "type": "object",
+        "required": ["firstName", "lastName", "email", "favoriteColor", "birthday"],
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "description": "User's first name"
+          },
+          "lastName": {
+            "type": "string",
+            "description": "User's last name"
+          },
+          "email": {
+            "type": "string",
+            "description": "User's email address"
+          },
+          "favoriteColor": {
+            "type": "string",
+            "description": "User's favorite color"
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date",
+            "description": "User's birthday"
+          }
+        },
+        "example": {
+          "firstName": "Promise",
+          "lastName": "Ezenwoke",
+          "email": "ezenwokeuchechukwu@gmail.com",
+          "favoriteColor": "Blue",
+          "birthday": "1992-07-21"
         }
       }
     }
