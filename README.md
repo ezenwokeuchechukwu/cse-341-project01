@@ -82,6 +82,7 @@ Video Demonstration
 A video demonstrating the functionality of this project is available on YouTube:
 Project Demo Video
  (https://youtu.be/5jbq1gRX5aM?si=SZ7h3HOIF7IPFUwe)
+(https://youtu.be/8Ezbch_ygMo?si=xuBTusB-H1hLS9AA)
 
 License
 
