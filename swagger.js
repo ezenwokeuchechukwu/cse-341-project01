@@ -9,7 +9,7 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: "http://localhost:3000",
+      url: "https://cse-341-project01-isr0.onrender.com",
     },
   ],
 };
