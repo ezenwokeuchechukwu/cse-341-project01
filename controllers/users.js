@@ -43,11 +43,15 @@ const createUser = async (req, res) => {
   const db = getDatabase();
   try {
     const result = await db.collection('users').insertOne(user);
-    res.status(201).json(result.ops[0]); // return created user
+    res.status(201).json({
+      message: 'User created successfully',
+      userId: result.insertedId
+    });
   } catch (err) {
     res.status(500).json({ error: 'Failed to create user', details: err.message });
   }
 };
+
 
 // PUT update user
 const updateUser = async (req, res) => {
