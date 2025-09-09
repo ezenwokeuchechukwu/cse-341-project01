@@ -1,8 +1,15 @@
-const router = require('express').Router(); // Fixed 'require' syntax
+const router = require('express').Router();
 
+// Swagger docs route
+router.use('/api-docs', require('./swagger')); // assuming ./swagger is another router serving swagger UI
+
+// Root route
 router.get('/', (req, res) => {
-  res.send('Welcome to the Contacts API');
+  //#swagger.tags = ['Hello World']
+  res.send('Hello World');
 });
 
-router.use('/users', require('./users')); // Fixed path to users.js
+// Users routes
+router.use('/users', require('./users'));
+
 module.exports = router;
