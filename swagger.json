@@ -6,11 +6,11 @@
     "description": "API for managing contacts"
   },
   "servers": [
-    {
-      "url": "cse-341-project01-isr0.onrender.com",
-      "description": "Production server on Render"
-    }
-  ],
+  {
+    "url": "https://cse-341-project01-isr0.onrender.com",
+    "description": "Production server on Render"
+}
+],
   "paths": {
     "/users": {
       "get": {
